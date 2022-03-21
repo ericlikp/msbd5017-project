@@ -8,11 +8,14 @@
     "48": "images/icon48.png",
     "128": "images/icon128.png"
   },
+  "action": {
+    "default_popup": "popup.html"
+  },
   "permissions": [
     "storage",
     "webNavigation",
     "scripting",
-    "storage"
+    "activeTab"
   ],
   "host_permissions": [
       "https://www.youtube.com/*"
