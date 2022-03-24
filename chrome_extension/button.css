@@ -14,7 +14,7 @@ button.current {
 
 body {
   height: 100px;
-  width: 200px;
+  width: 150px;
   margin: 20px;
 }
 
@@ -25,4 +25,13 @@ body {
 
 .column {
   flex: 50%;
+}
+
+input[type=submit] {
+    padding:7px 15px; 
+    background:#dcdcdc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
 }
