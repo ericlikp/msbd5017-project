@@ -1,0 +1,16 @@
+This document discribe the structure of the history object stored in the chrome.storage
+After parsing the string into JSON, we will get:
+{
+	type: 'Google & YouTube',
+    searchingHistory: [ // A list stores all the searching history
+		{
+			source: 'Google' / 'YouTube'
+			keywords: (some keywords searched in google or youtube),
+			timestamp: (timestamp of the search)
+		},
+		{
+			...similar as above
+		},
+		...
+	]
+}

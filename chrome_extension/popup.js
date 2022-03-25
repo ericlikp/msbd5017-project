@@ -30,6 +30,12 @@ if(profile) {
   });
 }
 
+var profile = document.querySelector("#toggle_manage");
+if(profile) {
+  profile.addEventListener('click', function() {
+    location.href = 'manage_hist.html'
+  });
+}
 
 
 //set popup settings
@@ -38,13 +44,13 @@ window.onload = function () {
 
     chrome.storage.sync.get('toggle', function(result) {
       if(checkbox) {
-        if(result.toggle === 1) 
+        if(result.toggle === 1)
           checkbox.checked = true;
         else
           checkbox.checked = false;
       }
-      
+
     });
-    
+
 
 }

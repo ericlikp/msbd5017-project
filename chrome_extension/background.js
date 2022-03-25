@@ -42,7 +42,7 @@ chrome.runtime.onMessage.addListener(
     chrome.storage.local.get(['history'],
       function(result){
         var hist_json = undefined;
-        // If history, initialize a history obj
+        // If no history, initialize a history obj
         if(!result.history){
           hist_json = {
             type: 'Google & YouTube',
@@ -66,4 +66,3 @@ chrome.runtime.onMessage.addListener(
     );
   }
 );
-
