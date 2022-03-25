@@ -26,7 +26,7 @@ if(checkbox){
 var profile = document.querySelector("#toggle_profile");
 if(profile) {
   profile.addEventListener('click', function() {
-  window.open('./profile.html');
+  window.open('./profile.html','_self');
   });
 }
 
