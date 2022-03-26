@@ -6,7 +6,7 @@ console.log("Toggle initialized as 0!");
 
 //get toggle status
 function getToggle() {
-   chrome.storage.sync.get('toggle', function(result) {
+  chrome.storage.sync.get('toggle', function(result) {
   console.log('[BACKGROUND] Value is ' + result.toggle);
   });
 }
@@ -55,13 +55,20 @@ chrome.runtime.onMessage.addListener(
           hist_json = JSON.parse(result.history);
         }
 
-
-        if(request.source === 'Google' || request.source === 'YouTube'){
-          hist_json.searchingHistory.push(request);
-          console.log('[MSBD5017] A ' + request.source + ' search for "' + request.keywords + '" has been added to the record.');
-          console.log(hist_json); // debugging message
-          chrome.storage.local.set({'history': JSON.stringify(hist_json)});
-        }
+        // get the toggle value (the #check_box in the popup.html)
+        chrome.storage.sync.get('toggle',
+          function(inner_result){
+            // when result.toggle === 1, add the search history to storage
+            if(inner_result.toggle === 1){
+              if(request.source === 'Google' || request.source === 'YouTube'){
+                hist_json.searchingHistory.push(request);
+                console.log('[MSBD5017] A ' + request.source + ' search for "' + request.keywords + '" has been added to the record.');
+                console.log(hist_json); // debugging message
+                chrome.storage.local.set({'history': JSON.stringify(hist_json)});
+              }
+            }
+          }
+        );
       }
     );
   }
