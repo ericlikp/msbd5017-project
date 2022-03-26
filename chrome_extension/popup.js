@@ -9,14 +9,14 @@ var checkbox = document.querySelector("#check_box");
 //listen for changes made to toggle
 if(checkbox){
   checkbox.addEventListener('change', function() {
-  if (this.checked) {
-    storeToggle(1);
-    console.log("toggle set to " + 1);
-  }
-  else {
-    storeToggle(0);
-    console.log("toggle set to " + 0);
-  }
+    if (this.checked) {
+      storeToggle(1);
+      console.log("toggle set to " + 1);
+    }
+    else {
+      storeToggle(0);
+      console.log("toggle set to " + 0);
+    }
   });
 }
 
@@ -26,13 +26,13 @@ if(checkbox){
 var profile = document.querySelector("#toggle_profile");
 if(profile) {
   profile.addEventListener('click', function() {
-  window.open('./profile.html','_self');
+  window.open('./view_profile.html','_self');
   });
 }
 
-var profile = document.querySelector("#toggle_manage");
-if(profile) {
-  profile.addEventListener('click', function() {
+var manage = document.querySelector("#toggle_manage");
+if(manage) {
+  manage.addEventListener('click', function() {
     location.href = 'manage_hist.html'
   });
 }
@@ -49,8 +49,5 @@ window.onload = function () {
         else
           checkbox.checked = false;
       }
-
     });
-
-
 }
