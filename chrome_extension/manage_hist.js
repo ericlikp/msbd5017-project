@@ -1,3 +1,8 @@
+console.log('[MSBD5017] Test axios');
+console.log(axios);
+console.log('[MSBD5017] Test rpc');
+console.log(Json_rpc_methods);
+
 chrome.storage.local.set({'toRemove': ''});
 
 chrome.storage.local.get(['history'],
@@ -63,14 +68,19 @@ chrome.storage.local.get(['history'],
             // Get the to be submitted hist
             var toSubmit = hist_json.filter((hist, index) => !toRemove.includes(index));
             var textToSave = JSON.stringify(toSubmit);
+            // Add to etd-blockchain and etd-filesystem
+            console.log("[MSBD5017] Try to send to etd");
+            var etd_bc_url = "https://rpc.debugchain.net/"; //"https://rpc.etdchain.net/"
+            var etd_fs_url = "http://39.98.50.209:5145/";
+
             // Save
-            var a = document.createElement('a');
-            a.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(textToSave));
-            a.setAttribute('download', 'history.txt');
-            a.style.display = 'none';
-            a.click();
+            // var a = document.createElement('a');
+            // a.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(textToSave));
+            // a.setAttribute('download', 'history.txt');
+            // a.style.display = 'none';
+            // a.click();
             // Clear all the history saved in extension
-            chrome.storage.local.remove('history');
+            // chrome.storage.local.remove('history');
           }
         );
       }
