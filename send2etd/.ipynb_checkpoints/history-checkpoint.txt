@@ -1,0 +1,4 @@
+Student
+Male
+7-16
+[{"source":"Google","keywords":"iphone","timestamp":1650514053051},{"source":"Google","keywords":"ipad","timestamp":1650514056027},{"source":"Google","keywords":"macbook","timestamp":1650514060929}]
