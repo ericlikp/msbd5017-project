@@ -1,4 +1,5 @@
 # MSBD5017 Project - SeedWallet
+* Repo: https://github.com/ericlikp/msbd5017-project
 
 ## Google Chrome Extension
 ### Correcting user seaching history from the belowing website
