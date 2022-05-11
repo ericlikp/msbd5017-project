@@ -1,2 +1,0 @@
-# Etherdata Python SDK
-
