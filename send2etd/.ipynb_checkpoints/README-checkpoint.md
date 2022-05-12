@@ -14,8 +14,8 @@ This folder demonstrates sending history to the ETD blockchain and the ETD file 
 	* Create one if it does not exist
 2. Generate a document including the user profile and search history
 3. Send a transaction with the hash value of the document to ETD Blockchain
-4. Load the password for DES encryption
-	* Create a password if it does not exist. Either input by the user or use the default password
+4. Load the sent password for DES encryption
+	* Create a password if it does not exist. Input by the user
 5. Encrypt the document using DES encryption with the defined password
 6. Send the encrypted document along with the user profile to ETD file storage
 
